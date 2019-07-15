@@ -15,13 +15,7 @@ export default class NewClass extends cc.Component {
     @property(cc.Node)
     moveNode: cc.Node = null;
 
-
-    // LIFE-CYCLE CALLBACKS:
-
-    // onLoad () {}
-
     start () {
-
     }
     goToLeave(){
         this.mapManager.commandSmallToLeave();

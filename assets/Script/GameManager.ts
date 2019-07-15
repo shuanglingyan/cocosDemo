@@ -1,51 +1,46 @@
-// import Small from "./Small";
+import Small from "./Small";
 
-// const { ccclass, property } = cc._decorator;
-// @ccclass
-// export default class GameManager extends cc.Component {
+const { ccclass, property } = cc._decorator;
+@ccclass
+export default class GameManager extends cc.Component {
     
 
-//     @property([Small])
-//     smalls:Small[] = [];
-//     static instance:GameManager;
-//     constructor(){
-//         super();
-//         GameManager.instance = this;
-//     }
+    @property([Small])
+    smalls:Small[] = [];
+    static instance:GameManager;
+    constructor(){
+        super();
+        GameManager.instance = this;
+    }
 
-//     getValidSmallToWatch(){
-//         return this.smalls[0];
-//     }
+    getValidSmallToWatch(){
+        return this.smalls[0];
+    }
 
-//     getValidSmallToPay(){
-//         return this.smalls[0];
-//     }
+    getValidSmallToPay(){
+        return this.smalls[0];
+    }
 
-//     getValidSmallToLeave(){
-//         return this.smalls[0];
-//     }
+    getValidSmallToLeave(){
+        return this.smalls[0];
+    }
 
-//     commandSmallToWatch(){
+    commandSmallToWatch(){
 
-//         let small = this.getValidSmallToWatch();
-//         // 
-//         small.toWatch();
-//     }
-//     commandSmallToPay(){
-//         let small=this. getValidSmallToPay();
-//         small.toPay();
-//         // console.log('111111');
-        
+        let small = this.getValidSmallToWatch();
+        // 
+        small.toWatch();
+    }
+    commandSmallToPay(){
+        let small=this. getValidSmallToPay();
+        small.toPay();
+    }
+    commandSmallToLeave(){
+        let small=this.getValidSmallToLeave();
+        small.toLeave();
+        //
+    }
 
-//         // 
-//     }
-//     commandSmallToLeave(){
-//         let small=this.getValidSmallToLeave();
-//         small.toLeave();
-//         //
-//     }
-
-   
-// }
+}
 
 

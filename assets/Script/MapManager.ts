@@ -2,8 +2,6 @@ import WalkNode from "./WalkNode";
 import * as dj from "dijkstrajs";
 import Small from "./Small";
 
-
-
 interface NodeInfo {
     [nodeIndex: string]: number;
 }
@@ -36,10 +34,6 @@ export default class MapManager extends cc.Component {
 
     @property(cc.Label)
     label: cc.Label = null;
-
-
-
-
 
     private createMap() {
         let graph: GraphInfo = {};
@@ -78,7 +72,6 @@ export default class MapManager extends cc.Component {
             this.roleComs.splice(idx, 1);
         }
     }
-
     returnMap() {
         return this.createMap();
     }
@@ -90,20 +83,12 @@ export default class MapManager extends cc.Component {
         return this.randomSum(this.walkNodes.length, 0) + '';
     }
     start() {
-        // this.createMap();
-        // console.log( dj.find_path(this.createMap(), '0', '5'));
-        // this.createRole();
-        // this.roleComs.forEach((com: Small, idx: number) => {
-        //     com.toWatch();
-        // });
-        // this.label.string='5555555'
-
     }
 
     update(dt: number) {
         // console.log(this.num);
         // this.num++;
-        if (this.roleComs.length < 3) {
+        if (this.roleComs.length < 5) {
             if (this.num % 180 === 0) {
                 let com = this.createRole();
                 com.toWatch();
@@ -116,7 +101,7 @@ export default class MapManager extends cc.Component {
                 this.peopleNum++;
             }
         }
-        this.label.string=`当前人数为: ${this.peopleNum}`;
+        this.label.string = `当前人数为: ${this.peopleNum}`;
 
 
     }
@@ -166,10 +151,6 @@ export default class MapManager extends cc.Component {
 
 
     }
-
-
-
-
 
     // commandSmallToPay() {
     //     this.roleComs.forEach((com: Small, idx: number) => {

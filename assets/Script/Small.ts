@@ -1,12 +1,3 @@
-// Learn TypeScript:
-//  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/typescript.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/manual/en/scripting/typescript.html
-// Learn Attribute:
-//  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/manual/en/scripting/reference/attributes.html
-// Learn life-cycle callbacks:
-//  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
 
 const { ccclass, property } = cc._decorator;
 
@@ -19,7 +10,6 @@ enum Direction {
     Up,
     Down
 }
-
 enum RoleState {
     Idle,
     GoToWatch,
@@ -28,7 +18,6 @@ enum RoleState {
     Paying,
     Leaving,
 }
-
 const Map: number = 0;
 @ccclass
 export default class Small extends cc.Component {
@@ -41,8 +30,6 @@ export default class Small extends cc.Component {
     counterAllPosIndex: string[] = [];
     terminalAllPosIndex: string;
     checkoutAllPosIndex: string;
-
-
 
     state: RoleState = RoleState.Idle;
     @property
@@ -64,12 +51,6 @@ export default class Small extends cc.Component {
 
     actionState: string;   //判断人物当前状态 goToWatch  watching  goToPay paying goToLeave left
     clickLeave: boolean = false;   //是否点击了离开按钮让他离开
-
-
-
-
-
-
 
     // LIFE-CYCLE CALLBACKS:
 
@@ -293,7 +274,6 @@ export default class Small extends cc.Component {
         //     // arrPos.push(arrCanvasChildren[index].getPosition());
         //     this.moveActionArr.push(arrCanvasChildren[index].getPosition());
         // }
-
         // return arrPos;
     }
 
@@ -307,15 +287,7 @@ export default class Small extends cc.Component {
         this.move(pos);
 
     }
-
-
-
-
-
-
     start() {
-
-
         // this.getPathPos();
         // this.actionLink();
 
@@ -420,8 +392,6 @@ export default class Small extends cc.Component {
 
         }
     }
-
-
     update(dt) {
 
         if (!this.isMove) {
